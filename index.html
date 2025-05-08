@@ -196,11 +196,71 @@
       transform: translateY(-5px);
     }
 
+.telegram-btn {
+      background-color: #1589FF;
+      color: black;
+      padding: 20px 5px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .telegram-btn:hover {
+      background-color: #1589FF;
+      transform: translateY(-5px);
+    }
+
+.github-btn {
+      background-color: #000000;
+      color: white;
+      padding: 20px 5px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .github-btn:hover {
+      background-color: #000000;
+      transform: translateY(-5px);
+    }
+
+        .profile-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+   .profile-info img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 25px;
-      margin-top: 20px;
+      gap: 45px;
+      margin-top: 10px;
       flex-wrap: wrap;
     }
 
@@ -214,29 +274,45 @@
       transform: scale(1.1);
     }
 
-  .promo-banner {
-      margin: 50px auto;
-      width: 100%;
-      max-width: 500px;
-      height: 450px;
-      border-radius: 10px;
-      overflow: hidden;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-   .promo-banner .banner-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: .8;
-    }
-
-   #main-content {
-    max-width: 1200px;
-    margin: 0px auto 0; /* tambahkan jarak dari atas (header) */
-    padding: 1rem;
-    min-height: calc(90vh - 50px); /* supaya konten tetap memenuhi layar */
-  }
+        .social-catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background-color: #121212;
+        }
+        .social-catalog .card {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .social-catalog .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .social-catalog .card h3 {
+            font-size: 22px;
+            margin-bottom: 1px;
+            color: #fff;
+        }
+        .social-catalog .card p {
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 1px;
+        }
+        .social-catalog .card a {
+          font-weight: bold;
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .social-catalog .card a:hover {
+            color: #81c784;
+        }
 
     iframe {
       width: 90%;
@@ -278,6 +354,42 @@
         transform: translateY(0);
       }
     }
+    
+            @media (max-width: 768px) {
+            .hero-image {
+                height: 22vh;
+            }
+            .profile-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-info img {
+                margin-bottom: 20px;
+                width: 150px;
+                height: 150px;
+            }
+            .profile-info div {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px;
+            }
+            .profile-info h2 {
+                font-size: 24px;
+            }
+            .profile-info p {
+                font-size: 14px;
+            }
+            .social-catalog {
+                padding: 20px;
+            }
+            .social-catalog .card h3 {
+                font-size: 20px;
+            
+            }
   </style>
 </head>
 
@@ -288,7 +400,7 @@
       <span></span>
       <span></span>
     </div>
-    Swiper Fvck
+    SWIPER FVCK
   </header>
 
   <!-- menu overlay -->
@@ -296,38 +408,45 @@
     <div class="close-menu" onclick="toggleMenu()">×</div>
     <a href="produk.html">Produk</a>
     <a href="social.html">Social</a>
+    <a href="info.html">Info Me</a>
   </nav>
 
- <div id="main-content">
-    <div class="promo-banner">
-      <img src="https://files.catbox.moe/xcix22.png" class="banner-img" alt="Promo Banner" />
-    </div>
-
-  <div class="menu-container">
-    <h2>Menu Utama</h2>
-
+<div class="container">
+    <div class="profile-info" style="display: flex; align-items: ;">
+        <img src="https://files.catbox.moe/xcix22.png" alt="Foto Profil" style="margin-middle: 20px;">
+        <div style="text-align: middle;">
+            <h2>Menu Utama</h2>
     <p>Hi, welcome to the SWIPER FVCK store. In the SWIPER FVCK store, we provide hosting needs. To see the product, you can click on the three lines in the upper left corner. Happy shopping</p>
-
-    <div class="social-icons">
-      <a href="https://whatsapp.com/channel/0029Vb5dUs07oQhjMXztZw2o" class="whatsapp2-btn" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" width="30" />
-      My Saluran
-    </a>
-    
-<a href="https://www.youtube.com/@Swipernothem" class="youtube-btn" target="_blank">
-      <img src="https://files.catbox.moe/tgmhke.png" alt="YouTube Logo" width="25" />
-      My YouTube
-    </a>
-    
-    <a href="https://https://github.com/swipfvck29" class="youtube-btn" target="_blank">
-      <img src="https://files.catbox.moe/hcg2ka.png" alt="Github Logo" width="25" />
-       My Github
-    </a>
-    
-    <a href="https://linktr.ee/swiperfvck" class="source-btn" target="_blank">
-      <img src="https://files.catbox.moe/8lrgm4.png" alt="Swiper Logo" width="30" />
-      Buat Beli Kopi
-    </a>
+        </div>
+      </div>
+    </div>
+    <div class="social-catalog">
+    <div class="card">
+        <img src="https://files.catbox.moe/eo0mbb.png" alt="Youtube" style="width: 20%; border-radius: 10px;">
+        <h3>Youtube</h3>
+        <p>Review about bot script.</p>
+        <a href="https://youtube.com/@Swipernothem" target="_blank">View Profile</a>
+    </div>
+    <div class="card">
+        <img src="https://files.catbox.moe/doe9gs.png" alt="GitHub" style="width: 20%; border-radius: 10px;">
+        <h3>GitHub</h3>
+        <p>Find out about free bot base script.</p>
+        <a href="https://github.com/swiperfvck29" target="_blank">View Profile</a>
+    </div>
+    <div class="card">
+        <img src="https://files.catbox.moe/pn3gh9.png" alt="Telegram" style="width: 20%; border-radius: 10px;">
+        <h3>Telegram</h3>
+        <p>Want to buy a script or service?</p>
+        <a href="https://t.me/SwiperFvck2" target="_blank">Contact Me</a>
+    </div>
+            <div class="card">
+        <img src="https://files.catbox.moe/8lrgm4.png" alt="Source" style="width: 20%; border-radius: 10px;">
+        <h3>Source Url</h3>
+        <p>Your support makes me excited</p>
+        <a href="https://linktr.ee/swiperfvck" target="_blank">Support Me</a>
+    </div>
+</div>
+  
   <footer>&copy; 2025 Swiper Fvck</footer>
 
   <script>
